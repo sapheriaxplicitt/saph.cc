@@ -1,5 +1,6 @@
 export default {
   async fetch(request, env) {
-    return env.ASSETS.fetch(request);
+    // Отдаёт все файлы из папки app
+    return env.ASSETS.fetch(request)
   }
-};
+}
