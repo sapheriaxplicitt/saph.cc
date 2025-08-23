@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>saph.cc;</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+html { scroll-behavior: smooth; }
+body {
+    margin: 50; padding: 50; overflow-x: hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+    cursor: none; color: #00000;
+    background: url('background.png') no-repeat center center/cover;
+}
+.white-black-gradient {
+    background: linear-gradient(90deg, #ffffff, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+.custom-cursor {
+    width: 10px; height: 10px; background: #fff;
+    border-radius: 9999px; position: fixed;
+    pointer-events: none; mix-blend-mode: difference;
+    z-index: 1000;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.glass:hover {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 6px 40px rgba(255, 255, 255, 0);
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+}
+.glass-button {
+    animation: float 5s ease-in-out infinite;
+}
+.pl-7 { padding-left: 3rem; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+
+<div class="custom-cursor" id="cursor"></div>
+
+<div class="flex flex-col items-center justify-center min-h-screen text-center px-4" id="main-container">
+    <div class="glass p-8 max-w-xl w-full shadow-xl text-left space-y-2 text-sm leading-relaxed font-medium lowercase">
+        <div class="pl-7">
+            <span class="text-lg white-black-gradient">saph</span>
+        </div>
+        <div class="italic pl-7">Known as: saph / nash / meph / mhp</div>
+        <div class="pl-7">
+            <span>I have experience with Luau, C#, C++, and Python, creating something in Roblox studio. Currently I'm learning how to build in Roblox Studio, and in the future I plan to try Blender. to contact my mail is sapheria@saph.cc</span>
+        </div>
+    </div>
+
+    <div class="flex space-x-4 mt-8" id="buttons-container">
+        <a href="https://discord.com/users/1124976771352248401" target="_blank" class="glass glass-button flex items-center space-x-2 px-4 py-2 hover:opacity-80 transition">
+            <i data-lucide="link" class="w-4 h-4 text-white"></i>
+            <span class="gradient-text">Discord Account</span>
+        </a>
+        <a href="https://www.roblox.com/users/7218523586/profile" target="_blank" class="glass glass-button flex items-center space-x-2 px-4 py-2 hover:opacity-80 transition">
+            <i data-lucide="link" class="w-4 h-4 text-white"></i>
+            <span class="gradient-text">Roblox Account</span>
+        </a>
+    </div>
+</div>
+
+<script>
+const cursor = document.getElementById("cursor");
+
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+lucide.createIcons();
+
+
+if (window.location.pathname === "/weao") {
+    const container = document.getElementById("main-container");
+    if (container) {
+        container.innerHTML = `
+            <div class="glass p-8 max-w-xl w-full shadow-xl text-center text-sm leading-relaxed font-medium lowercase">
+                <div class="pl-7">WEAO</div>
+                <div class="pl-7">sigma zzz</div>
+            </div>
+        `;
+    }
+}
+</script>
+</body>
+</html>
