@@ -1,6 +1,6 @@
-name = "app"
-main = "worker.js"
+name = "saphcc"                # имя воркера
+main = "worker.js"             # путь к файлу воркера
 compatibility_date = "2025-08-24"
 
 [site]
-bucket = "./app"
+bucket = "./app"               # папка с index.html и другими файлами
