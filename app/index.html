@@ -81,23 +81,26 @@ body {
 </div>
 
 <script>
-
-
 lucide.createIcons();
-
 
 if (window.location.pathname === "/weao") {
     const container = document.getElementById("main-container");
     if (container) {
         container.innerHTML = `
             <div class="glass p-8 max-w-xl w-full shadow-xl text-center text-sm leading-relaxed font-medium lowercase">
-                <div class="pl-7">WEAO Links</div>
-                <div class="gradient-text">https://weao.xyz, https://whatexpsare.online, https://weao.online</div>
+                <div class="pl-7 mb-2">WEAO Links</div>
+                <div class="flex flex-col space-y-2 gradient-text">
+                    <a href="https://weao.xyz" target="_blank" class="hover:underline">https://weao.xyz</a>
+                    <a href="https://whatexpsare.online" target="_blank" class="hover:underline">https://whatexpsare.online</a>
+                    <a href="https://weao.online" target="_blank" class="hover:underline">https://weao.online</a>
+                </div>
             </div>
         `;
     }
 }
 </script>
+
 </body>
 </html>
+
 
