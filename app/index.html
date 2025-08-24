@@ -10,7 +10,7 @@ html { scroll-behavior: smooth; }
 body {
     margin: 50; padding: 50; overflow-x: hidden;
     font-family: 'Inter', system-ui, sans-serif;
-    cursor: none; color: #00000;
+    
     background: url('background.png') no-repeat center center/cover;
 }
 .white-black-gradient {
@@ -19,12 +19,7 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: 600;
 }
-.custom-cursor {
-    width: 10px; height: 10px; background: #fff;
-    border-radius: 9999px; position: fixed;
-    pointer-events: none; mix-blend-mode: difference;
-    z-index: 1000;
-}
+
 .gradient-text {
     background: linear-gradient(90deg, #ff6ec4, #7873f5);
     -webkit-background-clip: text;
@@ -67,7 +62,7 @@ body {
         <div class="pl-7">
             <span class="text-lg white-black-gradient">saph</span>
         </div>
-        <div class="italic pl-7">Known as: saph / nash / meph / mhp</div>
+        <div class="italic pl-7">Known as: saph / nash / meph / aaaad</div>
         <div class="pl-7">
             <span>I have experience with Luau, C#, C++, and Python, creating something in Roblox studio. Currently I'm learning how to build in Roblox Studio, and in the future I plan to try Blender. to contact my mail is sapheria@saph.cc</span>
         </div>
@@ -86,12 +81,7 @@ body {
 </div>
 
 <script>
-const cursor = document.getElementById("cursor");
 
-document.addEventListener("mousemove", e => {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-});
 
 lucide.createIcons();
 
@@ -101,8 +91,8 @@ if (window.location.pathname === "/weao") {
     if (container) {
         container.innerHTML = `
             <div class="glass p-8 max-w-xl w-full shadow-xl text-center text-sm leading-relaxed font-medium lowercase">
-                <div class="pl-7">WEAO</div>
-                <div class="pl-7">sigma zzz</div>
+                <div class="pl-7">WEAO Links</div>
+                <div class="gradient-text">https://weao.xyz, https://whatexpsare.online, https://weao.online</div>
             </div>
         `;
     }
